@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- <meta name="viewport" content="width=450" /> -->
+
+    <title>grid</title>
+    <script src="seven_setup.js" defer></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="nimish">
+        <div class="pannel">
+            <h1 class="pannel">Control Pannel<br></h1>
+        </div>
+        
+        <div class="src">
+        </div>
+        <div class="search-bar">
+            <input type="text" class="search_bar" placeholder="Search for below..">
+        </div>
+
+        <div class="element-option ">
+           <div class="class_css_creator">
+            <div>nimsih</div>   
+            <div>nimsih</div>
+            <div>nimsih</div>
+            <div>nimsih</div>
+            <div>nimsih</div>
+           </div>
+
+         </div>
+        
+    </div>
+    <!-- <div class="col-resizer" style="width: 100px;"></div> -->
+    <div class="rehan"><iframe style="width:100%;height:100%; " src="http://127.0.0.1:5500/rrr.html" class="iframe"></iframe></div>
+    <div class="extra-option">
+        <div class="options-inner-extra">
+
+            <div class="drop-down">
+                <select name="extra-optio" class="extra-optio" id="">
+                    <!-- <option>Tools</option>
+                    <option>Cdn pacakage</option>
+   -->
+                </select>
+            </div>
+            <div class="option_accords_selected">
+                
+            </div>
+        </div>
+        <div class="ad-block"  style="border: black solid;">AD CAN BE PLACED HERE</div>
+    </div>
+    <div class="extra-option-grid">
+        <div class="iframe-width-changer">
+          <p>Change VIew-Port</p>  
+        </div>
+        <div class="iframe-width-changer-inner">
+            <p>Value: <span id="demo">900px</span></p>
+            <input type="range" min="50" max="100" value="100" class="slider" width="100%" id="myRange">
+        
+        </div>
+        <div class="dom_mapper">
+
+        </div>
+        
+           
+    </div>
+
+    
+
+    <div class="show_drop_point_area1"></div>
+    <div class="show_drop_point_area2"></div>
+    <div class="show_drop_point_area3"></div>
+    <div class="show_drop_point_area4"></div>
+    <style>
+        *{
+            margin: 0px;
+        }
+        body
+        {
+            
+            margin-bottom: 5px;
+        display: grid;
+        grid-template-columns:20fr  70fr 15fr;
+        grid-template-rows:7vh 93vh;
+        grid-template-areas: "nimish  extra-option extra-option"
+        " nimish  rehan extra-option-grid";
+        }
+        .nimish{
+            grid-area: nimish;    
+            display: grid;
+            
+            border:1px solid black ;
+            grid-template-rows: 7vh 10vh 3vh 80vh;            
+            flex-grow:inherit;
+        }
+
+        .search-bar{
+            display: grid;
+            justify-items: center;
+            /* padding-left: 2px;
+            margin:5px; */
+            padding-top:2px ;
+
+        }
+        .search-bar>input{
+            width: 90%;
+        }
+        .pannel{
+            background-color: tomato;
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        .item{
+            grid-column: 1/4;
+        }
+
+        .src{
+
+         margin: 0px;
+         /* align-self:flex-start; */
+            display: grid;
+            background-color: violet;
+            /* top: -10000px; */
+            /* grid-template-rows: 4vh; */
+            grid-template-columns: 20% 20% 60% ;
+            
+        }
+        .before{
+            grid-auto-flow: row;
+            grid-template-columns: 100%;
+            grid-template-rows: 30% 60%;
+
+        }
+        .before_inner
+        {
+            display: grid;
+            grid-template-columns:repeat(auto-fit , 50%) ;
+        }
+        .before_inner>button
+        {
+            margin: 10%;
+            margin-top: 5%;
+            margin-bottom: 20%;
+        }
+        .element-option{
+            background-color: grey;
+            padding-left: 2px;
+            margin:5px;
+            padding-top: 1vh;
+            
+            
+            overflow:visible;
+            display: grid;
+            grid-auto-flow: row;
+          /*  grid-template-rows:repeat(auto-fit , 10vh) ;*/
+        }
+
+        .add_classs:{}
+        .add-element:hover{
+            background-color: brown;
+        }
+        .element_style_opt{
+            
+        }
+        .Add_Element{
+
+            grid-template-rows:repeat(auto-fit , 8vh) ;
+            grid-template-columns:repeat(auto-fit , 33.33%) ;
+        }
+        .Add_Element>div{
+            
+        background-color: brown;
+            margin: 10%;
+        }
+
+       .extra-option{
+            background-color: yellow;
+            grid-area: extra-option;
+            display: grid;
+            grid-template-columns: 82% 18%;
+        }
+        .options-inner-extra{
+            display: grid;
+            grid-template-columns: 20% 80%;
+        }
+
+        .extra-option-grid{
+            background-color: blue;
+        }
+        .drop-down{
+            background-color: purple;
+            /* display: grid;
+            justify-items: center;
+            align-items: center; */
+        }
+        .extra-optio
+        {
+            
+            width: 80%;
+            height: 80%;
+            left: 50%;
+            
+            /* margin: 10px; */
+            /* padding: -25px; */ 
+            /* margin: 1vh; */
+            /* padding: 20%; */
+        }
+        .option_accords_selected
+        {
+            display: grid;
+            grid-auto-flow: column;
+
+            grid-template-columns:  repeat(auto-fit ,minmax(10%));
+        }
+
+        .iframe-width-changer
+        {
+            display: grid;
+            grid-auto-flow: column;
+            width: 100%;
+            height:7vh;
+            text-align: left;
+            cursor: pointer;
+            background-color: purple;
+            
+            align-items: center;
+
+        }
+        .iframe-width-changer::after{
+            content: '\002B';
+            color: green;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        #myRange{
+            width: 100%;
+        }
+
+        .iframe-width-changer-inner{
+          
+            background-color: salmon;
+            
+            display: none;
+             
+        }
+
+
+        .col-resizer{
+            /* overflow: visible; */
+            cursor: col-resize;
+        }
+
+        .add_element_inner{
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            
+            
+        }
+
+        .rehan{
+            
+            grid-area: rehan;
+            
+            margin: 3px;
+            
+            border: 2px solid rgba(0, 0, 0, 0);
+            display: grid;
+            justify-items: center;
+            
+        }
+        
+        .show_drop_point_area
+         {
+            width: 30vw;
+            height: 30vh;
+            opacity: 0.3;
+            background-color: blue;
+            position: absolute;
+            z-index: 9;
+            text-align: center;
+            border: 2px dotted #d3d3d3;
+            display: none;
+        }
+
+
+        
+
+        .show_drop_point_area1 {
+                width: 0.0001vh;
+                height: 30vh;
+                opacity: 0.3;
+                background-color: blue;
+                position: absolute;
+                z-index: 9;
+                text-align: center;
+                border: 2px dotted #d3d3d3;
+                }
+
+
+                .show_drop_point_area2 {
+                    height: 0.0001vh;
+                width: 300px;
+                top: 30vh;
+                opacity: 0.3;
+                background-color: blue;
+                position: absolute;
+                z-index: 9;
+                text-align: center;
+                border: 2px dotted #d3d3d3;
+                }
+
+                .show_drop_point_area3 {
+                height: 0.0001vh;
+                width: 300px;
+                opacity: 0.3;
+                background-color: blue;
+                position: absolute;
+                z-index: 9;
+                text-align: center;
+                border: 2px dotted #d3d3d3;
+                }
+
+                .show_drop_point_area4 {
+                width: 0.0001vh;
+                height: 30vh;
+                left: 300px;
+                
+                opacity: 0.3;
+                background-color: blue;
+                position: absolute;
+                z-index: 9;
+                text-align: center;
+                border: 2px dotted #d3d3d3;
+                }
+                .class_css_creator{
+                    
+                    grid-template-rows:repeat(auto-fit , 5vh) ;
+                    grid-template-columns:repeat(auto-fit , 5vw) ;
+                    padding-left: 10px;
+                    justify-items: center;
+                    
+                }
+        
+    </style>
+</body>
+
+</html>
